@@ -2,8 +2,7 @@
 // Site Configuration
 define('SITE_NAME', 'CORTAVIA AI Solutions');
 define('SITE_TAGLINE', 'THINK beyond AI');
-define('SITE_EMAIL', 'contact@cortavia.com');
-define('SITE_PHONE', '+1 (555) 123-4567');
+define('SITE_EMAIL', 'contact@cortavia.in');
 
 // Brand Colors
 define('COLOR_PRIMARY', '#2A9D49');

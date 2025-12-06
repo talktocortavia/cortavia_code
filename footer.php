@@ -26,8 +26,7 @@
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <ul class="footer-contact">
-                        <li><?php echo SITE_EMAIL; ?></li>
-                        <li><?php echo SITE_PHONE; ?></li>
+                        <li><a href="mailto:<?php echo SITE_EMAIL; ?>" style="color: var(--color-text-muted); text-decoration: none; transition: color 0.3s ease;"><?php echo SITE_EMAIL; ?></a></li>
                     </ul>
                 </div>
             </div>

@@ -8,18 +8,17 @@ $messageType = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = htmlspecialchars($_POST['name'] ?? '');
     $email = htmlspecialchars($_POST['email'] ?? '');
-    $phone = htmlspecialchars($_POST['phone'] ?? '');
     $subject = htmlspecialchars($_POST['subject'] ?? '');
     $message_text = htmlspecialchars($_POST['message'] ?? '');
     
     if (!empty($name) && !empty($email) && !empty($message_text)) {
         // In a real application, you would send an email here
         // For now, we'll just show a success message
-        $message = 'Thank you for your message! We will get back to you soon.';
+        $message = 'Thank you for your message! We will get back to you at ' . htmlspecialchars($email) . ' within 24 hours.';
         $messageType = 'success';
         
         // Clear form
-        $name = $email = $phone = $subject = $message_text = '';
+        $name = $email = $subject = $message_text = '';
     } else {
         $message = 'Please fill in all required fields.';
         $messageType = 'error';
@@ -49,13 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div>
                             <h4>Email</h4>
                             <a href="mailto:<?php echo SITE_EMAIL; ?>"><?php echo SITE_EMAIL; ?></a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-item-icon">📞</div>
-                        <div>
-                            <h4>Phone</h4>
-                            <a href="tel:<?php echo str_replace([' ', '(', ')', '-'], '', SITE_PHONE); ?>"><?php echo SITE_PHONE; ?></a>
+                            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 0.5rem;">We'll respond within 24 hours</p>
                         </div>
                     </div>
                 </div>
@@ -77,11 +70,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="form-group">
                         <label for="email">Email *</label>
                         <input type="email" id="email" name="email" required value="<?php echo isset($email) ? $email : ''; ?>">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone" value="<?php echo isset($phone) ? $phone : ''; ?>">
                     </div>
                     
                     <div class="form-group">

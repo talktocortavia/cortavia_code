@@ -30,23 +30,25 @@ PHP_Website/
 ## Setup Instructions
 
 1. **Copy logo files** - Make sure the logo files are accessible:
+
    - `../public/logo.png` - Plain logo for header
    - `../public/CORTAVIA_LOGO.png` - Full logo for homepage
-
 2. **Web Server** - Place the `PHP_Website` folder in your web server directory:
+
    - For XAMPP/WAMP: `htdocs/PHP_Website/`
    - For Apache: `/var/www/html/PHP_Website/`
    - Or use PHP's built-in server: `php -S localhost:8000`
-
 3. **Access the website**:
+
    - Open `http://localhost/PHP_Website/` in your browser
    - Or `http://localhost:8000/` if using PHP's built-in server
 
 ## Configuration
 
 Edit `config.php` to update:
+
 - Site name and tagline
-- Contact email and phone
+- Contact email (contact@cortavia.in)
 - Brand colors (if needed)
 
 ## Contact Form
@@ -75,3 +77,6 @@ The contact form is currently set up to display a success message. To enable act
 - All images should be in the `../public/` directory relative to PHP_Website
 - The design is fully responsive and mobile-friendly
 
+` $phpPath = "C:\Users\sures\AppData\Local\Microsoft\WinGet\Packages\PHP.PHP.8.3_Microsoft.Winget.Source_8wekyb3d8bbwe"; $env:Path += ";$phpPath";`
+
+`php -S localhost:8000`
