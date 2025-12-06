@@ -1,0 +1,20 @@
+# Temporary files
+temp.txt
+*.tmp
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Server files
+start-server.bat
+start-server.ps1
+
