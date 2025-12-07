@@ -4,6 +4,7 @@ require_once 'header.php';
 ?>
 
 <section class="hero">
+    <canvas class="neural-canvas" id="neuralCanvas"></canvas>
     <div class="container">
         <div class="hero-content">
             <div class="hero-text">
@@ -193,30 +194,30 @@ require_once 'header.php';
                 </p>
                 <div class="tech-list">
                     <div class="tech-item">
-                        <div class="tech-item-icon">🦜</div>
+                        <div class="tech-item-icon"><img src="images/tile_icons/langchain.png" alt="LangChain"></div>
                         <div class="tech-item-text">
                             <h4>LangChain & LangGraph</h4>
                             <p>Orchestrating complex chains and stateful agents for sophisticated reasoning.</p>
                         </div>
                     </div>
                     <div class="tech-item">
-                        <div class="tech-item-icon">🧠</div>
+                        <div class="tech-item-icon"><img src="images/tile_icons/gpt.png" alt="GPT-4"></div>
                         <div class="tech-item-text">
                             <h4>State-of-the-Art ML Models</h4>
                             <p>Utilizing GPT-4, Claude 3.5, and Llama 3 for world-class intelligence.</p>
                         </div>
                     </div>
                     <div class="tech-item">
-                        <div class="tech-item-icon">🤖</div>
+                        <div class="tech-item-icon"><img src="images/tile_icons/llama.png" alt="Llama"></div>
                         <div class="tech-item-text">
                             <h4>Agentic Systems</h4>
                             <p>Autonomous agents capable of planning, tool use, and multi-step problem solving.</p>
                         </div>
                     </div>
                     <div class="tech-item">
-                        <div class="tech-item-icon">⚡</div>
+                        <div class="tech-item-icon"><img src="images/tile_icons/mcp.png" alt="MCP"></div>
                         <div class="tech-item-text">
-                            <h4>MCO (Model Context Optimization)</h4>
+                            <h4>MCP (Model Context Protocol)</h4>
                             <p>Optimized context management for accurate and cost-effective responses.</p>
                         </div>
                     </div>
@@ -224,30 +225,42 @@ require_once 'header.php';
             </div>
             <div class="tech-visuals">
                 <div class="tech-grid-visual">
-                    <!-- Placeholder Logos/Visuals -->
+                    <!-- Technology Logos -->
                     <div class="tech-logo-card">
-                        <span class="tech-logo-icon">🦜</span>
+                        <img src="images/tile_icons/langchain.png" alt="LangChain" class="tech-logo-icon">
                         <span>LangChain</span>
                     </div>
                     <div class="tech-logo-card">
-                        <span class="tech-logo-icon">🔗</span>
+                        <img src="images/tile_icons/langgraph.png" alt="LangGraph" class="tech-logo-icon">
                         <span>LangGraph</span>
                     </div>
                     <div class="tech-logo-card">
-                        <span class="tech-logo-icon">🤖</span>
+                        <img src="images/tile_icons/llama.png" alt="Llama 3" class="tech-logo-icon">
                         <span>Llama 3</span>
                     </div>
                     <div class="tech-logo-card">
-                        <span class="tech-logo-icon">🧠</span>
+                        <img src="images/tile_icons/gpt.png" alt="GPT-4" class="tech-logo-icon">
                         <span>GPT-4</span>
                     </div>
                     <div class="tech-logo-card">
-                        <span class="tech-logo-icon">⚡</span>
-                        <span>MCO</span>
+                        <img src="images/tile_icons/mcp.png" alt="MCP" class="tech-logo-icon">
+                        <span>MCP</span>
                     </div>
                     <div class="tech-logo-card">
-                        <span class="tech-logo-icon">🛡️</span>
-                        <span>Security</span>
+                        <img src="images/tile_icons/gemini.png" alt="Gemini" class="tech-logo-icon">
+                        <span>Gemini</span>
+                    </div>
+                    <div class="tech-logo-card">
+                        <img src="images/tile_icons/gcp.png" alt="Google Cloud" class="tech-logo-icon">
+                        <span>Google Cloud</span>
+                    </div>
+                    <div class="tech-logo-card">
+                        <img src="images/tile_icons/aws.png" alt="AWS" class="tech-logo-icon">
+                        <span>AWS</span>
+                    </div>
+                    <div class="tech-logo-card">
+                        <img src="images/tile_icons/azure.png" alt="Azure" class="tech-logo-icon">
+                        <span>Azure</span>
                     </div>
                 </div>
                 <div class="tech-visual-bg"></div>
@@ -396,7 +409,6 @@ require_once 'header.php';
         </div>
     </div>
 </section>
-
 
 <section class="cta-section">
     <div class="container">

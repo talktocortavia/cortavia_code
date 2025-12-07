@@ -208,6 +208,16 @@ body {
     overflow: hidden;
 }
 
+.neural-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -751,6 +761,15 @@ body {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-item-icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
 }
 
 .tech-item-text h4 {
@@ -766,7 +785,7 @@ body {
 
 .tech-grid-visual {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     position: relative;
     z-index: 2;
@@ -795,6 +814,9 @@ body {
 
 .tech-logo-icon {
     font-size: 2.5rem;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
 }
 
 .tech-logo-card span:last-child {
@@ -1176,17 +1198,78 @@ body {
     margin: 0;
 }
 
+/* CTA Section */
+.cta-section {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15), transparent 70%);
+    pointer-events: none;
+}
+
+.cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-content h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    background: linear-gradient(135deg, var(--color-text-light), var(--color-primary-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-content p {
+    font-size: 1.25rem;
+    color: var(--color-text);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+}
+
+.cta-content .btn-large {
+    font-size: 1.125rem;
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-content p {
+        font-size: 1.1rem;
+    }
+}
+
 /* Service Content Tile Card */
 .service-content-section {
-    padding: 80px 0;
+    padding: 40px 0;
     position: relative;
 }
 
 .service-content-tile {
     background: linear-gradient(135deg, rgba(30, 34, 45, 0.9), rgba(20, 24, 35, 0.95));
     border: 2px solid rgba(59, 130, 246, 0.3);
-    border-radius: 24px;
-    padding: 4rem;
+    border-radius: 20px;
+    padding: 2rem;
     box-shadow: 0 20px 60px rgba(59, 130, 246, 0.25), 0 0 40px rgba(59, 130, 246, 0.1);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -1215,39 +1298,48 @@ body {
 }
 
 .service-tile-icon {
-    font-size: 4rem;
-    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    margin-right: 1rem;
     filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
     display: inline-block;
+    vertical-align: middle;
 }
 
 .service-content-tile h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--color-text-light);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     font-weight: 700;
     background: linear-gradient(135deg, var(--color-text-light), var(--color-primary-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.service-tile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
 }
 
 .service-tile-subtitle {
-    font-size: 1.25rem;
+    font-size: 0.95rem;
     color: var(--color-primary-light);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-weight: 600;
 }
 
 .service-tile-description {
-    font-size: 1.15rem;
+    font-size: 0.9rem;
     color: var(--color-text);
-    line-height: 1.8;
-    margin-bottom: 2.5rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
 }
 
 .service-tile-features {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .service-features-list {
@@ -1258,11 +1350,11 @@ body {
 
 .service-features-list li {
     color: var(--color-text);
-    font-size: 1rem;
-    padding: 1rem 0;
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
-    line-height: 1.7;
+    line-height: 1.4;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -1274,17 +1366,17 @@ body {
     content: '✓';
     position: absolute;
     left: 0;
-    top: 1rem;
+    top: 0.5rem;
     color: var(--color-primary);
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 }
 
 .service-tile-benefits h4 {
     color: var(--color-text-light);
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .service-benefits-list {
@@ -1292,31 +1384,32 @@ body {
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.6rem;
 }
 
 .service-benefits-list li {
     color: var(--color-text);
-    font-size: 1rem;
-    padding: 1rem;
-    padding-left: 2.5rem;
+    font-size: 0.85rem;
+    padding: 0.6rem;
+    padding-left: 1.75rem;
     position: relative;
     background: rgba(59, 130, 246, 0.05);
-    border-radius: 12px;
+    border-radius: 8px;
     border: 1px solid rgba(59, 130, 246, 0.1);
     transition: all 0.3s ease;
+    line-height: 1.3;
 }
 
 .service-benefits-list li::before {
     content: '→';
     position: absolute;
-    left: 1rem;
+    left: 0.6rem;
     top: 50%;
     transform: translateY(-50%);
     color: var(--color-primary);
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 }
 
 .service-benefits-list li:hover {
@@ -1536,7 +1629,7 @@ body {
 .carousel-wrapper {
     position: relative;
     perspective: 1200px;
-    height: 500px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1559,12 +1652,12 @@ body {
 
 .carousel-item {
     position: absolute;
-    width: 300px;
-    height: 400px;
+    width: 240px;
+    height: 320px;
     left: 50%;
     top: 50%;
-    margin-left: -150px;
-    margin-top: -200px;
+    margin-left: -120px;
+    margin-top: -160px;
     transform-style: preserve-3d;
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -1574,8 +1667,8 @@ body {
     height: 100%;
     background: linear-gradient(135deg, rgba(30, 34, 45, 0.9), rgba(20, 24, 35, 0.95));
     border: 2px solid rgba(59, 130, 246, 0.3);
-    border-radius: 24px;
-    padding: 3rem 2rem;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1615,8 +1708,8 @@ body {
 }
 
 .carousel-icon {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
     filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
     transition: all 0.4s ease;
 }
@@ -1627,9 +1720,9 @@ body {
 }
 
 .carousel-card h3 {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     color: var(--color-text-light);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     font-weight: 700;
     transition: all 0.4s ease;
 }
@@ -1641,9 +1734,9 @@ body {
 }
 
 .carousel-card p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--color-text-muted);
-    line-height: 1.6;
+    line-height: 1.5;
     transition: all 0.4s ease;
 }
 
@@ -1654,12 +1747,15 @@ body {
 
 .carousel-controls {
     position: absolute;
-    bottom: -80px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
+    padding: 0 2rem;
     z-index: 10;
+    pointer-events: none;
 }
 
 .carousel-btn {
@@ -1677,6 +1773,7 @@ body {
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    pointer-events: all;
 }
 
 .carousel-btn:hover {

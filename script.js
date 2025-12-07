@@ -1,4 +1,157 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Neural Network Background
+    class NeuralNetworkBackground {
+        constructor() {
+            this.canvas = document.getElementById('neuralCanvas');
+            if (!this.canvas) return;
+            
+            this.ctx = this.canvas.getContext('2d');
+            this.neurons = [];
+            this.connections = [];
+            this.energyPulses = [];
+            
+            this.resize();
+            this.init();
+            this.animate();
+            
+            window.addEventListener('resize', () => this.resize());
+        }
+
+        resize() {
+            const hero = this.canvas.closest('.hero');
+            if (hero) {
+                this.canvas.width = hero.offsetWidth;
+                this.canvas.height = hero.offsetHeight;
+            }
+        }
+
+        init() {
+            const neuronCount = Math.floor((this.canvas.width * this.canvas.height) / 15000);
+            
+            for (let i = 0; i < neuronCount; i++) {
+                this.neurons.push({
+                    x: Math.random() * this.canvas.width,
+                    y: Math.random() * this.canvas.height,
+                    size: Math.random() * 3 + 2,
+                    pulsePhase: Math.random() * Math.PI * 2,
+                    isLarge: Math.random() < 0.1,
+                    glowIntensity: 0.5 + Math.random() * 0.5
+                });
+            }
+
+            for (let i = 0; i < this.neurons.length; i++) {
+                for (let j = i + 1; j < this.neurons.length; j++) {
+                    const dx = this.neurons[i].x - this.neurons[j].x;
+                    const dy = this.neurons[i].y - this.neurons[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 150 && Math.random() < 0.3) {
+                        this.connections.push({
+                            from: i,
+                            to: j,
+                            opacity: 0,
+                            pulsePhase: Math.random() * Math.PI * 2,
+                            energy: 0
+                        });
+                    }
+                }
+            }
+        }
+
+        animate() {
+            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            
+            const time = Date.now() * 0.001;
+
+            this.connections.forEach(connection => {
+                const fromNeuron = this.neurons[connection.from];
+                const toNeuron = this.neurons[connection.to];
+                
+                connection.opacity = 0.1 + 0.3 * (Math.sin(time * 0.5 + connection.pulsePhase) + 1) * 0.5;
+                
+                this.ctx.strokeStyle = `rgba(59, 130, 246, ${connection.opacity * 0.3})`;
+                this.ctx.lineWidth = 1;
+                this.ctx.beginPath();
+                this.ctx.moveTo(fromNeuron.x, fromNeuron.y);
+                this.ctx.lineTo(toNeuron.x, toNeuron.y);
+                this.ctx.stroke();
+
+                if (Math.random() < 0.005) {
+                    this.createEnergyPulse(fromNeuron, toNeuron);
+                }
+            });
+
+            this.energyPulses = this.energyPulses.filter(pulse => {
+                pulse.progress += pulse.speed;
+                
+                if (pulse.progress >= 1) return false;
+                
+                const x = pulse.from.x + (pulse.to.x - pulse.from.x) * pulse.progress;
+                const y = pulse.from.y + (pulse.to.y - pulse.from.y) * pulse.progress;
+                
+                const alpha = Math.sin(pulse.progress * Math.PI) * 0.8;
+                
+                this.ctx.beginPath();
+                this.ctx.arc(x, y, 2, 0, Math.PI * 2);
+                this.ctx.fillStyle = `rgba(124, 196, 255, ${alpha})`;
+                this.ctx.fill();
+                
+                this.ctx.beginPath();
+                this.ctx.arc(x, y, 6, 0, Math.PI * 2);
+                this.ctx.fillStyle = `rgba(59, 130, 246, ${alpha * 0.2})`;
+                this.ctx.fill();
+                
+                return true;
+            });
+
+            this.neurons.forEach(neuron => {
+                const pulseIntensity = 0.7 + 0.3 * Math.sin(time * 2 + neuron.pulsePhase);
+                const glowSize = neuron.size * (neuron.isLarge ? 2 : 1.5) * pulseIntensity;
+                
+                const gradient = this.ctx.createRadialGradient(
+                    neuron.x, neuron.y, 0,
+                    neuron.x, neuron.y, glowSize * 2
+                );
+                
+                if (neuron.isLarge) {
+                    gradient.addColorStop(0, `rgba(59, 130, 246, ${0.8 * pulseIntensity})`);
+                    gradient.addColorStop(0.5, `rgba(59, 130, 246, ${0.3 * pulseIntensity})`);
+                    gradient.addColorStop(1, 'rgba(59, 130, 246, 0)');
+                } else {
+                    gradient.addColorStop(0, `rgba(124, 196, 255, ${0.6 * pulseIntensity})`);
+                    gradient.addColorStop(0.5, `rgba(59, 130, 246, ${0.2 * pulseIntensity})`);
+                    gradient.addColorStop(1, 'rgba(59, 130, 246, 0)');
+                }
+                
+                this.ctx.beginPath();
+                this.ctx.arc(neuron.x, neuron.y, glowSize * 2, 0, Math.PI * 2);
+                this.ctx.fillStyle = gradient;
+                this.ctx.fill();
+                
+                this.ctx.beginPath();
+                this.ctx.arc(neuron.x, neuron.y, neuron.size * pulseIntensity, 0, Math.PI * 2);
+                this.ctx.fillStyle = neuron.isLarge ? 
+                    `rgba(59, 130, 246, ${0.9 * pulseIntensity})` : 
+                    `rgba(124, 196, 255, ${0.7 * pulseIntensity})`;
+                this.ctx.fill();
+            });
+
+            requestAnimationFrame(() => this.animate());
+        }
+
+        createEnergyPulse(from, to) {
+            this.energyPulses.push({
+                from: from,
+                to: to,
+                progress: 0,
+                speed: 0.01 + Math.random() * 0.02
+            });
+        }
+    }
+
+    // Initialize Neural Network
+    new NeuralNetworkBackground();
+
     // Mobile Navigation Toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');

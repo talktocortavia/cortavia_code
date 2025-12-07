@@ -72,8 +72,10 @@ require_once 'header.php';
     <div class="container">
         <div id="serviceContentCard" class="service-content-tile">
             <div class="service-content-tile-inner">
-                <div class="service-tile-icon" id="serviceTileIcon">💬</div>
-                <h2 id="serviceTileTitle">AI Chatbot</h2>
+                <div class="service-tile-header">
+                    <span class="service-tile-icon" id="serviceTileIcon">💬</span>
+                    <h2 id="serviceTileTitle">AI Chatbot</h2>
+                </div>
                 <p class="service-tile-subtitle" id="serviceTileSubtitle">Enterprise Knowledge Assistant</p>
                 <p class="service-tile-description" id="serviceTileDescription">
                     Our AI Chatbot serves as your organization's intelligent knowledge assistant, capable of understanding 
