@@ -19,7 +19,6 @@
                 <div class="footer-section">
                     <h4>Company</h4>
                     <ul class="footer-links">
-                        <li><a href="about.php">Why CORTAVIA</a></li>
                         <li><a href="contact.php">Contact Us</a></li>
                     </ul>
                 </div>
