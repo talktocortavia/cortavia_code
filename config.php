@@ -3,6 +3,7 @@
 define('SITE_NAME', 'CORTAVIA AI Solutions');
 define('SITE_TAGLINE', 'THINK beyond AI');
 define('SITE_EMAIL', 'contact@cortavia.in');
+define('SITE_URL', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST']);
 
 // Brand Colors
 define('COLOR_PRIMARY', '#2A9D49');
