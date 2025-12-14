@@ -302,125 +302,84 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Service data for tile card
     const serviceData = {
-        'chatbot': {
-            icon: '💬',
-            title: 'AI Chatbot',
-            subtitle: 'Enterprise Knowledge Assistant',
-            description: 'Our AI Chatbot serves as your organization\'s intelligent knowledge assistant, capable of understanding complex queries and providing accurate, context-aware responses. Built with enterprise security standards, it seamlessly integrates with your existing systems and learns from every interaction to continuously improve.',
+        'assist': {
+            icon: '🤖',
+            title: 'Cortavia Assist',
+            subtitle: 'AI Experience & Support Platform',
+            description: '24×7 intelligent support for customers, vendors, and internal teams. Instantly resolves queries, provides real-time updates, analyses sentiment, and integrates seamlessly with CRM and ERP systems to reduce workload and operational costs. Our comprehensive AI platform delivers personalized assistance across all touchpoints, ensuring exceptional experiences while dramatically improving operational efficiency and customer satisfaction metrics.',
             features: [
-                '<strong>Comprehensive Knowledge Integration</strong> - Harnesses internal documents, knowledge bases, and web resources to provide accurate, up-to-date information',
-                '<strong>Bank-Level Security</strong> - Enterprise-grade secure data ingestion and processing with end-to-end encryption and compliance with industry standards',
-                '<strong>Intelligent Learning</strong> - Adaptive AI that learns user behavior and context patterns to deliver increasingly personalized responses',
-                '<strong>Perfect for Teams</strong> - Ideal for internal support, training, and knowledge management across departments',
-                '<strong>Multi-Language Support</strong> - Communicate in multiple languages with native-level understanding and response quality',
-                '<strong>Analytics Dashboard</strong> - Track usage patterns, identify knowledge gaps, and measure ROI with comprehensive analytics'
+                '<strong>24×7 Intelligent Support</strong> - Round-the-clock availability for customers, vendors, and internal teams with instant query resolution and real-time assistance across multiple channels including chat, email, and voice',
+                '<strong>Advanced Sentiment Analysis</strong> - Real-time emotion detection and sentiment tracking that automatically routes urgent issues, identifies customer satisfaction trends, and enables proactive intervention for at-risk accounts',
+                '<strong>Seamless System Integration</strong> - Deep integration with CRM, ERP, ticketing systems, and business applications for real-time data access, order tracking, account management, and automated workflow triggers',
+                '<strong>Multi-Channel Communication</strong> - Unified platform supporting chat, email, voice, social media, and messaging apps with consistent experience and conversation history across all touchpoints',
+                '<strong>Intelligent Knowledge Base</strong> - Self-learning knowledge system that continuously updates from interactions, documents, and training materials to provide accurate, context-aware responses',
+                '<strong>Performance Analytics</strong> - Comprehensive dashboards tracking response times, resolution rates, customer satisfaction scores, cost savings, and operational metrics with actionable insights'
             ],
             benefits: [
-                'Reduce support ticket volume by up to 70%',
-                'Instant access to organizational knowledge 24/7',
-                'Improved employee onboarding and training efficiency',
-                'Centralized knowledge management system'
+                'Reduce support costs by up to 60% while improving response times to under 2 seconds',
+                'Increase customer satisfaction scores by 40%+ with personalized, instant support',
+                'Handle unlimited concurrent conversations without scaling human resources',
+                'Gain real-time visibility into customer sentiment and operational performance'
             ]
         },
-        'support': {
-            icon: '🎧',
-            title: 'Customer Support Chatbot',
-            subtitle: '24/7 Intelligent Customer Assistance',
-            description: 'Transform your customer support operations with an AI-powered chatbot that never sleeps. Our solution handles common inquiries instantly, escalates complex issues to human agents, and integrates seamlessly with your existing customer relationship management systems.',
+        'evaluate': {
+            icon: '📊',
+            title: 'Cortavia Evaluate',
+            subtitle: 'AI Academic & Performance Evaluation',
+            description: 'AI-powered system that generates assessments and evaluates performance for students and professionals using custom syllabi, content, and criteria. Delivers objective scoring, progress tracking, and bias-free insights for education and corporate environments. Our intelligent evaluation platform adapts to your specific curriculum, learning objectives, and assessment standards, providing comprehensive analytics that drive improved outcomes and fair, data-driven decision-making.',
             features: [
-                '<strong>Real-Time Updates</strong> - Instant information for your customers about orders, services, and account status',
-                '<strong>System Integration</strong> - Connects to your ERP/CRM systems seamlessly for real-time data access',
-                '<strong>24×7 Support</strong> - Round-the-clock availability with personalized responses in multiple languages',
-                '<strong>Cost Reduction</strong> - Significantly reduces call center load and operational costs by up to 60%',
-                '<strong>Sentiment Analysis</strong> - Understand customer emotions and automatically route urgent issues to human agents',
-                '<strong>Conversation History</strong> - Complete interaction logs for quality assurance and continuous improvement'
+                '<strong>Custom Assessment Generation</strong> - Automatically creates comprehensive assessments, quizzes, and exams based on your custom syllabi, learning objectives, and content requirements with varying difficulty levels',
+                '<strong>Intelligent Performance Scoring</strong> - Advanced AI algorithms that evaluate responses using natural language processing, providing objective scoring with detailed feedback on knowledge gaps and strengths',
+                '<strong>Progress Tracking & Analytics</strong> - Comprehensive tracking of individual and group performance over time with visual analytics, trend identification, and predictive insights for intervention',
+                '<strong>Bias-Free Evaluation</strong> - Objective assessment system that eliminates unconscious bias, ensuring fair evaluation across all demographics and providing equal opportunity for all candidates',
+                '<strong>Multi-Format Support</strong> - Evaluates written responses, multiple-choice answers, coding assignments, presentations, and practical demonstrations with consistent scoring criteria',
+                '<strong>Customizable Evaluation Rubrics</strong> - Define your own evaluation metrics, scoring systems, and assessment criteria that align with your educational or corporate standards and requirements'
             ],
             benefits: [
-                'Average response time under 2 seconds',
-                'Handle multiple conversations simultaneously',
-                'Improve customer satisfaction scores by 40%+',
-                'Seamless handoff to human agents when needed'
+                'Reduce evaluation time by 80% while maintaining accuracy and consistency',
+                'Provide objective, bias-free assessments that ensure fair evaluation for all',
+                'Enable data-driven insights for personalized learning paths and improvement',
+                'Scale evaluation capabilities without proportional increase in resources'
             ]
         },
-        'evaluator': {
-            icon: '📝',
-            title: 'AI Evaluator',
-            subtitle: 'Intelligent Performance Analysis',
-            description: 'Make data-driven hiring and performance decisions with our AI Evaluator. Using advanced natural language processing and machine learning, it analyzes interviews, resumes, and performance data to provide objective, bias-free assessments that help you find the best talent and make informed decisions.',
-            features: [
-                '<strong>Transcript Analysis</strong> - Analyzes interview and meeting transcripts with precision, identifying key competencies and red flags',
-                '<strong>Performance Scoring</strong> - Scores performance based on your defined criteria with consistent, objective evaluation',
-                '<strong>Decision Support</strong> - Helps with hiring, promotions, and training decisions with data-driven insights',
-                '<strong>Resume Shortlisting</strong> - Automatically picks top candidates by reading job descriptions and resumes, saving hours of manual review',
-                '<strong>Bias Detection</strong> - Identifies and mitigates unconscious bias in evaluation processes',
-                '<strong>Customizable Criteria</strong> - Define your own evaluation metrics and scoring rubrics'
-            ],
-            benefits: [
-                'Reduce time-to-hire by 50%',
-                'Improve candidate quality and fit',
-                'Objective, consistent evaluation standards',
-                'Comprehensive analytics and reporting'
-            ]
-        },
-        'automation': {
+        'automate': {
             icon: '⚡',
-            title: 'Business Process Automation',
-            subtitle: 'Streamline Your Operations',
-            description: 'Automate your entire business process workflow with intelligent AI systems. From document processing to predictive analytics, our automation solutions reduce manual work, eliminate errors, and accelerate business operations while maintaining the highest standards of accuracy and compliance.',
+            title: 'Cortavia Automate',
+            subtitle: 'AI Business Process Automation',
+            description: 'End-to-end automation of documents, workflows, approvals, and compliance using AI and RPA. Improves operational efficiency, accuracy, and real-time visibility across business processes. Our intelligent automation platform combines artificial intelligence with robotic process automation to transform manual, repetitive tasks into streamlined, error-free operations that operate 24/7, enabling your organization to focus on strategic initiatives while dramatically reducing costs and improving service quality.',
             features: [
-                '<strong>Document Automation</strong> - Complete document inflow and outflow automation with intelligent extraction and classification',
-                '<strong>Workflow Management</strong> - Intelligent routing and approval systems that adapt to your business rules',
-                '<strong>Compliance Assistance</strong> - Automated reporting and compliance support with audit trails and documentation',
-                '<strong>ML Model Development</strong> - Predictive analytics and custom models tailored to your data for forecasting and optimization',
-                '<strong>RPA Integration</strong> - Combine AI with robotic process automation for end-to-end process automation',
-                '<strong>Real-Time Monitoring</strong> - Track process performance, identify bottlenecks, and optimize workflows continuously'
+                '<strong>Intelligent Document Processing</strong> - Complete automation of document inflow and outflow with AI-powered extraction, classification, validation, and routing that handles invoices, contracts, forms, and reports',
+                '<strong>Smart Workflow Management</strong> - Intelligent routing and approval systems that adapt to your business rules, automatically escalate exceptions, and optimize process flows based on historical patterns',
+                '<strong>RPA Integration</strong> - Seamless combination of AI with robotic process automation for end-to-end process automation, including legacy system integration and cross-platform workflows',
+                '<strong>Compliance & Audit Automation</strong> - Automated reporting, compliance monitoring, and audit trail generation with real-time alerts for violations and comprehensive documentation for regulatory requirements',
+                '<strong>Predictive Analytics & Optimization</strong> - ML models tailored to your data for forecasting, bottleneck identification, resource optimization, and predictive maintenance of automated processes',
+                '<strong>Real-Time Process Monitoring</strong> - Live dashboards tracking process performance, SLA compliance, error rates, and operational metrics with automated alerts and continuous optimization recommendations'
             ],
             benefits: [
-                'Process documents 10x faster than manual methods',
-                'Reduce processing errors by 95%+',
-                '24/7 automated operations',
-                'Scalable solutions that grow with your business'
+                'Process documents and workflows 10x faster than manual methods with 95%+ accuracy',
+                'Reduce operational costs by up to 70% while eliminating human errors and delays',
+                'Enable 24/7 automated operations that scale instantly with business demands',
+                'Achieve complete visibility and control over all automated processes with real-time insights'
             ]
         },
-        'research-agents': {
-            icon: '🔬',
-            title: 'AI Research Agents',
-            subtitle: 'Autonomous Intelligence Research Systems',
-            description: 'Deploy autonomous AI agents that conduct comprehensive research, analyze vast amounts of data, synthesize information from multiple sources, and generate actionable insights. These intelligent agents work continuously to gather, process, and present research findings, saving your team countless hours while ensuring thorough and accurate analysis.',
+        'people': {
+            icon: '👥',
+            title: 'Cortavia People',
+            subtitle: 'End-to-End HR Intelligence Platform',
+            description: 'A unified AI solution covering interviews, hiring, skill assessment, performance reviews, promotions, and workforce analytics, enabling fair and data-driven HR decision-making. Our comprehensive HR intelligence platform transforms every aspect of human resource management, from initial candidate screening through ongoing performance evaluation and career development, providing objective insights that eliminate bias and enable strategic workforce planning.',
             features: [
-                '<strong>Autonomous Research</strong> - AI agents independently conduct research across web sources, databases, and documents to gather comprehensive information',
-                '<strong>Multi-Source Synthesis</strong> - Combines information from various sources, identifies patterns, and synthesizes findings into coherent reports',
-                '<strong>Real-Time Updates</strong> - Continuously monitors and updates research findings as new information becomes available',
-                '<strong>Custom Research Goals</strong> - Configure agents for specific research objectives, from market analysis to competitive intelligence',
-                '<strong>Citation & Source Tracking</strong> - Automatically tracks and cites all sources, ensuring transparency and verifiability',
-                '<strong>Natural Language Reports</strong> - Generates human-readable research reports, summaries, and presentations'
+                '<strong>Intelligent Interview Analysis</strong> - Real-time evaluation of interviews assessing communication skills, technical knowledge, problem-solving abilities, cultural fit, and leadership potential with objective scoring',
+                '<strong>Comprehensive Hiring Support</strong> - End-to-end hiring automation from resume screening and shortlisting to candidate comparison, background verification, and offer management with bias-free evaluation',
+                '<strong>Skill Assessment & Validation</strong> - Automated skill testing and validation across technical, soft, and domain-specific competencies with detailed competency mapping and gap analysis',
+                '<strong>Performance Review Automation</strong> - AI-powered performance evaluation that analyzes work output, collaboration, goal achievement, and growth potential with objective scoring and development recommendations',
+                '<strong>Promotion & Career Path Analytics</strong> - Data-driven insights for promotion decisions, career path recommendations, and succession planning based on performance, skills, and organizational needs',
+                '<strong>Workforce Analytics & Insights</strong> - Comprehensive analytics covering talent acquisition metrics, retention patterns, performance trends, diversity metrics, and predictive workforce planning'
             ],
             benefits: [
-                'Reduce research time by 80-90%',
-                'Comprehensive coverage of topics and sources',
-                '24/7 autonomous research capabilities',
-                'Consistent, objective analysis without human bias'
-            ]
-        },
-        'interview-evaluator': {
-            icon: '🎯',
-            title: 'Interview Evaluators',
-            subtitle: 'Intelligent Candidate Assessment System',
-            description: 'Transform your hiring process with AI-powered interview evaluation systems. Our intelligent evaluators analyze interviews in real-time, assessing communication skills, technical knowledge, problem-solving abilities, cultural fit, and overall candidate performance. Get objective, bias-free evaluations with detailed feedback reports that help you make better hiring decisions faster.',
-            features: [
-                '<strong>Real-Time Analysis</strong> - Evaluates interviews as they happen, providing instant feedback and scoring',
-                '<strong>Multi-Dimensional Assessment</strong> - Analyzes technical skills, communication, problem-solving, cultural fit, and leadership potential',
-                '<strong>Bias-Free Evaluation</strong> - Objective assessment that eliminates unconscious bias and ensures fair evaluation',
-                '<strong>Detailed Feedback Reports</strong> - Comprehensive reports with strengths, weaknesses, and improvement areas for each candidate',
-                '<strong>Customizable Evaluation Criteria</strong> - Define your own evaluation rubrics and scoring systems',
-                '<strong>Comparison Analytics</strong> - Compare candidates side-by-side with standardized metrics',
-                '<strong>Integration with ATS</strong> - Seamlessly integrates with Applicant Tracking Systems for streamlined workflows'
-            ],
-            benefits: [
-                'Reduce time-to-hire by 50-60%',
-                'Improve hiring quality and candidate fit',
-                'Eliminate evaluation inconsistencies',
-                'Comprehensive candidate insights and analytics'
+                'Reduce time-to-hire by 50-60% while improving candidate quality and organizational fit',
+                'Enable fair, objective HR decisions that eliminate bias and ensure equal opportunity',
+                'Provide comprehensive workforce insights for strategic planning and talent optimization',
+                'Streamline all HR processes from hiring to performance management in one unified platform'
             ]
         }
     };

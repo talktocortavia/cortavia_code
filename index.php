@@ -31,34 +31,15 @@ require_once 'header.php';
         <h2 class="section-title">What We Do</h2>
         <div class="interactive-features">
             <div class="features-list">
-                <div class="feature-item active" data-target="automation">
-                    <div class="feature-icon-wrapper">
-                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Intelligent AI Automation</h3>
-                </div>
-                <div class="feature-item" data-target="models">
-                    <div class="feature-icon-wrapper">
-                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Custom Model Development</h3>
-                </div>
-                <div class="feature-item" data-target="chatbots">
+                <div class="feature-item active" data-target="assist">
                     <div class="feature-icon-wrapper">
                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3>Enterprise Chatbot Systems</h3>
+                    <h3>Cortavia Assist</h3>
                 </div>
-                <div class="feature-item" data-target="bi">
+                <div class="feature-item" data-target="evaluate">
                     <div class="feature-icon-wrapper">
                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -66,62 +47,33 @@ require_once 'header.php';
                             <path d="M21 10V3H14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3>Business Intelligence</h3>
+                    <h3>Cortavia Evaluate</h3>
                 </div>
-                <div class="feature-item" data-target="research">
+                <div class="feature-item" data-target="automate">
                     <div class="feature-icon-wrapper">
                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.663 17H4.337C3.603 17 3 16.397 3 15.663V4.337C3 3.603 3.603 3 4.337 3H9.663C10.397 3 11 3.603 11 4.337V15.663C11 16.397 10.397 17 9.663 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M21 3V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M13 7H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M13 11H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M13 15H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M13 19H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3>AI Research Agents</h3>
+                    <h3>Cortavia Automate</h3>
                 </div>
-                <div class="feature-item" data-target="interview">
+                <div class="feature-item" data-target="people">
                     <div class="feature-icon-wrapper">
                         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3>Interview Evaluators</h3>
+                    <h3>Cortavia People</h3>
                 </div>
             </div>
             <div class="features-display">
-                <div class="feature-display-content active" id="automation">
+                <div class="feature-display-content active" id="assist">
                     <div class="display-visual automation-visual">
-                        <div class="visual-icon-svg">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <div class="visual-circle"></div>
-                    </div>
-                    <h3>Intelligent AI Automation</h3>
-                    <p>Streamline operations with smart automation that adapts to your business needs. Reduce manual work by up to 80% while improving accuracy and efficiency across all departments. Our automation solutions learn and evolve with your processes.</p>
-                    <a href="services.php#automation" class="btn btn-primary btn-sm">Learn More</a>
-                </div>
-                <div class="feature-display-content" id="models">
-                    <div class="display-visual models-visual">
-                        <div class="visual-icon-svg">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <div class="visual-circle"></div>
-                    </div>
-                    <h3>Custom Model Development</h3>
-                    <p>Tailored AI solutions designed specifically for your unique requirements. From concept to deployment, we build models that understand your business domain, industry nuances, and specific challenges.</p>
-                    <a href="services.php" class="btn btn-primary btn-sm">Learn More</a>
-                </div>
-                <div class="feature-display-content" id="chatbots">
-                    <div class="display-visual chatbots-visual">
                         <div class="visual-icon-svg">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -129,12 +81,12 @@ require_once 'header.php';
                         </div>
                         <div class="visual-circle"></div>
                     </div>
-                    <h3>Enterprise Chatbot Systems</h3>
-                    <p>Advanced conversational AI for seamless customer and internal support. Handle thousands of queries simultaneously with human-like understanding and response quality. Multi-language support with context awareness.</p>
-                    <a href="services.php#chatbot" class="btn btn-primary btn-sm">Learn More</a>
+                    <h3>Cortavia Assist</h3>
+                    <p>24×7 intelligent support for customers, vendors, and internal teams. Instantly resolves queries, provides real-time updates, analyses sentiment, and integrates seamlessly with CRM and ERP systems to reduce workload and operational costs.</p>
+                    <a href="services.php" class="btn btn-primary btn-sm">Learn More</a>
                 </div>
-                <div class="feature-display-content" id="bi">
-                    <div class="display-visual bi-visual">
+                <div class="feature-display-content" id="evaluate">
+                    <div class="display-visual models-visual">
                         <div class="visual-icon-svg">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -144,40 +96,40 @@ require_once 'header.php';
                         </div>
                         <div class="visual-circle"></div>
                     </div>
-                    <h3>Business Intelligence</h3>
-                    <p>Data-driven insights and analytics to power your decision-making. Transform raw data into actionable intelligence that drives growth and optimization. Real-time dashboards and predictive analytics.</p>
+                    <h3>Cortavia Evaluate</h3>
+                    <p>AI-powered system that generates assessments and evaluates performance for students and professionals using custom syllabi, content, and criteria. Delivers objective scoring, progress tracking, and bias-free insights for education and corporate environments.</p>
                     <a href="services.php" class="btn btn-primary btn-sm">Learn More</a>
                 </div>
-                <div class="feature-display-content" id="research">
-                    <div class="display-visual research-visual">
+                <div class="feature-display-content" id="automate">
+                    <div class="display-visual chatbots-visual">
                         <div class="visual-icon-svg">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.663 17H4.337C3.603 17 3 16.397 3 15.663V4.337C3 3.603 3.603 3 4.337 3H9.663C10.397 3 11 3.603 11 4.337V15.663C11 16.397 10.397 17 9.663 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M21 3V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13 7H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13 11H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13 15H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13 19H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
                         <div class="visual-circle"></div>
                     </div>
-                    <h3>AI Research Agents</h3>
-                    <p>Autonomous AI agents that conduct comprehensive research, analyze data, synthesize information, and generate insights. Perfect for market research, competitive analysis, and knowledge discovery. Works 24/7 to gather and process information.</p>
-                    <a href="services.php#research-agents" class="btn btn-primary btn-sm">Learn More</a>
+                    <h3>Cortavia Automate</h3>
+                    <p>End-to-end automation of documents, workflows, approvals, and compliance using AI and RPA. Improves operational efficiency, accuracy, and real-time visibility across business processes while reducing manual work and operational costs.</p>
+                    <a href="services.php" class="btn btn-primary btn-sm">Learn More</a>
                 </div>
-                <div class="feature-display-content" id="interview">
-                    <div class="display-visual interview-visual">
+                <div class="feature-display-content" id="people">
+                    <div class="display-visual bi-visual">
                         <div class="visual-icon-svg">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
                         <div class="visual-circle"></div>
                     </div>
-                    <h3>Interview Evaluators</h3>
-                    <p>Intelligent interview analysis and candidate evaluation systems. Real-time assessment of communication skills, technical knowledge, cultural fit, and overall performance. Provides objective, bias-free evaluations with detailed feedback reports.</p>
-                    <a href="services.php#interview-evaluator" class="btn btn-primary btn-sm">Learn More</a>
+                    <h3>Cortavia People</h3>
+                    <p>A unified AI solution covering interviews, hiring, skill assessment, performance reviews, promotions, and workforce analytics, enabling fair and data-driven HR decision-making across the entire employee lifecycle.</p>
+                    <a href="services.php" class="btn btn-primary btn-sm">Learn More</a>
                 </div>
             </div>
         </div>
@@ -186,12 +138,12 @@ require_once 'header.php';
 
 <section class="technologies-section">
     <div class="container">
+        <h2 class="tech-title">Built with Advanced Technologies</h2>
+        <p class="tech-description">
+            We leverage the most advanced frameworks and models to build agentic systems that are robust, scalable, and intelligent.
+        </p>
         <div class="tech-layout">
             <div class="tech-content">
-                <h2 class="tech-title">Built with Advanced Technologies</h2>
-                <p class="tech-description">
-                    We leverage the most advanced frameworks and models to build agentic systems that are robust, scalable, and intelligent.
-                </p>
                 <div class="tech-list">
                     <div class="tech-item">
                         <div class="tech-item-icon"><img src="images/tile_icons/langchain.png" alt="LangChain"></div>
@@ -330,12 +282,12 @@ require_once 'header.php';
                         <path d="M15 9V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h3>Enterprise Organizations</h3>
-                <p>Transform large-scale operations with AI-powered automation. Reduce operational costs, improve compliance, and enhance productivity across multiple departments.</p>
+                <h3>Enterprise Operations</h3>
+                <p>Transform large-scale business operations with intelligent automation and streamlined workflows. Reduce operational costs, improve compliance, and enhance productivity across all departments.</p>
                 <ul class="use-case-list">
-                    <li>Document processing automation</li>
-                    <li>Intelligent workflow management</li>
-                    <li>Enterprise knowledge management</li>
+                    <li>Automated document processing and workflows</li>
+                    <li>Intelligent business process optimization</li>
+                    <li>Real-time compliance and approval systems</li>
                 </ul>
             </div>
             <div class="use-case-card">
@@ -347,12 +299,29 @@ require_once 'header.php';
                         <path d="M8 6H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h3>E-commerce & Retail</h3>
-                <p>Enhance customer experience with intelligent chatbots, personalized recommendations, and automated customer support that never sleeps.</p>
+                <h3>Customer Experience</h3>
+                <p>Deliver exceptional 24×7 support with AI-powered assistance for customers, vendors, and teams. Handle queries instantly, provide real-time updates, and integrate seamlessly with existing systems.</p>
                 <ul class="use-case-list">
-                    <li>24/7 customer support</li>
-                    <li>Product recommendation engines</li>
-                    <li>Inventory management automation</li>
+                    <li>Intelligent 24/7 customer support</li>
+                    <li>Multi-channel engagement and sentiment analysis</li>
+                    <li>CRM and ERP system integration</li>
+                </ul>
+            </div>
+            <div class="use-case-card">
+                <div class="use-case-icon-wrapper">
+                    <svg class="use-case-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Human Resources & Talent</h3>
+                <p>Revolutionize HR with AI-driven hiring, performance evaluation, and workforce intelligence. From interviews to promotions, enable fair, data-driven decisions across the entire employee lifecycle.</p>
+                <ul class="use-case-list">
+                    <li>AI-powered interview and skill assessment</li>
+                    <li>Performance reviews and promotion tracking</li>
+                    <li>Workforce analytics and decision support</li>
                 </ul>
             </div>
             <div class="use-case-card">
@@ -362,12 +331,12 @@ require_once 'header.php';
                         <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h3>Healthcare & Life Sciences</h3>
-                <p>Improve patient care with AI-driven diagnostics, automated administrative tasks, and intelligent data analysis for better outcomes.</p>
+                <h3>Education & Performance</h3>
+                <p>Transform assessment and evaluation with AI that generates custom tests, evaluates performance objectively, and provides bias-free insights for students and professionals.</p>
                 <ul class="use-case-list">
-                    <li>Medical record analysis</li>
-                    <li>Appointment scheduling automation</li>
-                    <li>Clinical decision support</li>
+                    <li>Custom assessment generation and grading</li>
+                    <li>Objective performance scoring and tracking</li>
+                    <li>Progress analytics for education and corporate training</li>
                 </ul>
             </div>
         </div>

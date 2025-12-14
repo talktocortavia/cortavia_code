@@ -15,46 +15,32 @@ require_once 'header.php';
         <div class="carousel-wrapper">
             <div class="carousel-container">
                 <div class="carousel-track" id="servicesCarousel">
-                    <div class="carousel-item" data-service="chatbot">
+                    <div class="carousel-item" data-service="assist">
                         <div class="carousel-card">
-                            <div class="carousel-icon">💬</div>
-                            <h3>AI Chatbot</h3>
-                            <p>Enterprise Knowledge Assistant</p>
+                            <div class="carousel-icon">🤖</div>
+                            <h3>Cortavia Assist</h3>
+                            <p>AI Experience & Support Platform</p>
                         </div>
                     </div>
-                    <div class="carousel-item" data-service="support">
+                    <div class="carousel-item" data-service="evaluate">
                         <div class="carousel-card">
-                            <div class="carousel-icon">🎧</div>
-                            <h3>Customer Support</h3>
-                            <p>24/7 Intelligent Assistance</p>
+                            <div class="carousel-icon">📊</div>
+                            <h3>Cortavia Evaluate</h3>
+                            <p>AI Academic & Performance Evaluation</p>
                         </div>
                     </div>
-                    <div class="carousel-item" data-service="evaluator">
-                        <div class="carousel-card">
-                            <div class="carousel-icon">📝</div>
-                            <h3>AI Evaluator</h3>
-                            <p>Intelligent Performance Analysis</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" data-service="automation">
+                    <div class="carousel-item" data-service="automate">
                         <div class="carousel-card">
                             <div class="carousel-icon">⚡</div>
-                            <h3>Process Automation</h3>
-                            <p>Streamline Your Operations</p>
+                            <h3>Cortavia Automate</h3>
+                            <p>AI Business Process Automation</p>
                         </div>
                     </div>
-                    <div class="carousel-item" data-service="research-agents">
+                    <div class="carousel-item" data-service="people">
                         <div class="carousel-card">
-                            <div class="carousel-icon">🔬</div>
-                            <h3>AI Research Agents</h3>
-                            <p>Autonomous Intelligence Systems</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" data-service="interview-evaluator">
-                        <div class="carousel-card">
-                            <div class="carousel-icon">🎯</div>
-                            <h3>Interview Evaluators</h3>
-                            <p>Intelligent Candidate Assessment</p>
+                            <div class="carousel-icon">👥</div>
+                            <h3>Cortavia People</h3>
+                            <p>End-to-End HR Intelligence Platform</p>
                         </div>
                     </div>
                 </div>
@@ -73,14 +59,12 @@ require_once 'header.php';
         <div id="serviceContentCard" class="service-content-tile">
             <div class="service-content-tile-inner">
                 <div class="service-tile-header">
-                    <span class="service-tile-icon" id="serviceTileIcon">💬</span>
-                    <h2 id="serviceTileTitle">AI Chatbot</h2>
+                    <span class="service-tile-icon" id="serviceTileIcon">🤖</span>
+                    <h2 id="serviceTileTitle">Cortavia Assist</h2>
                 </div>
-                <p class="service-tile-subtitle" id="serviceTileSubtitle">Enterprise Knowledge Assistant</p>
+                <p class="service-tile-subtitle" id="serviceTileSubtitle">AI Experience & Support Platform</p>
                 <p class="service-tile-description" id="serviceTileDescription">
-                    Our AI Chatbot serves as your organization's intelligent knowledge assistant, capable of understanding 
-                    complex queries and providing accurate, context-aware responses. Built with enterprise security standards, 
-                    it seamlessly integrates with your existing systems and learns from every interaction to continuously improve.
+                    24×7 intelligent support for customers, vendors, and internal teams. Instantly resolves queries, provides real-time updates, analyses sentiment, and integrates seamlessly with CRM and ERP systems to reduce workload and operational costs.
                 </p>
                 <div class="service-tile-features" id="serviceTileFeatures">
                     <ul class="service-features-list">

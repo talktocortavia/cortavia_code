@@ -704,11 +704,29 @@ body {
     background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.2));
 }
 
+.tech-title {
+    font-size: 2.5rem;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.tech-description {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 4rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .tech-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
-    align-items: center;
+    align-items: start;
 }
 
 .tech-content {
@@ -720,23 +738,62 @@ body {
     position: relative;
 }
 
-.tech-title {
-    font-size: 2.5rem;
-    color: var(--color-text-light);
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-}
-
-.tech-description {
-    font-size: 1.1rem;
-    color: var(--color-text-muted);
-    margin-bottom: 3rem;
-}
-
 .tech-list {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+.tech-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+}
+
+.tech-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(10px);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.tech-item-icon {
+    font-size: 2rem;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-item-icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.tech-item-text h4 {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.tech-item-text p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+.tech-grid-visual {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
 }
 
 .tech-item {
