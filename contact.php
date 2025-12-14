@@ -51,6 +51,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 0.5rem;">We'll respond within 24 hours</p>
                         </div>
                     </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📍</div>
+                        <div>
+                            <h4>Bengaluru Office</h4>
+                            <p style="color: var(--color-text); line-height: 1.6;">
+                                3rd Cross, Virat Nagar,<br>
+                                Bommanahalli<br>
+                                Bengaluru, Karnataka 560068<br>
+                                India
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📍</div>
+                        <div>
+                            <h4>Sanchore Office</h4>
+                            <p style="color: var(--color-text); line-height: 1.6;">
+                                Char Rasta Sanchore <br>
+                                Jalore, Rajasthan 343041<br>
+                                India
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             

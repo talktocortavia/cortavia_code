@@ -26,6 +26,10 @@
                     <h4>Contact</h4>
                     <ul class="footer-contact">
                         <li><a href="mailto:<?php echo SITE_EMAIL; ?>" style="color: var(--color-text-muted); text-decoration: none; transition: color 0.3s ease;"><?php echo SITE_EMAIL; ?></a></li>
+                        <li style="color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.6; margin-top: 0.5rem;">
+                            Bengaluru, Karnataka<br>
+                            Sanchore, Rajasthan
+                        </li>
                     </ul>
                 </div>
             </div>
