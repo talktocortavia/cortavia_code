@@ -8,7 +8,7 @@ require_once 'header.php';
     <div class="container">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">CORTAVIA AI Solutions</h1>
+                <h1 class="hero-title">CORTAVIA<br>AI Solutions</h1>
                 <p class="hero-tagline"><?php echo SITE_TAGLINE; ?></p>
                 <p class="hero-description">
                     Transform your business with intelligent AI automation, custom model development, 

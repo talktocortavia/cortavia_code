@@ -1,4 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlElement = document.documentElement;
+    
+    // Check for saved theme preference or default to 'dark'
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    htmlElement.setAttribute('data-theme', currentTheme);
+    
+    // Theme toggle function
+    function toggleTheme() {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // Add animation class
+        themeToggle.style.transform = 'scale(0.9) rotate(180deg)';
+        setTimeout(() => {
+            themeToggle.style.transform = '';
+        }, 300);
+    }
+    
+    // Event listener for theme toggle button
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+
     // Neural Network Background
     class NeuralNetworkBackground {
         constructor() {
@@ -62,6 +90,12 @@ document.addEventListener('DOMContentLoaded', function() {
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
             
             const time = Date.now() * 0.001;
+            const isLightMode = document.documentElement.getAttribute('data-theme') === 'light';
+            
+            // Adjust colors based on theme
+            const primaryColor = isLightMode ? '16, 185, 129' : '59, 130, 246';
+            const lightColor = isLightMode ? '52, 211, 153' : '124, 196, 255';
+            const baseOpacity = isLightMode ? 0.5 : 0.3;
 
             this.connections.forEach(connection => {
                 const fromNeuron = this.neurons[connection.from];
@@ -69,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 connection.opacity = 0.1 + 0.3 * (Math.sin(time * 0.5 + connection.pulsePhase) + 1) * 0.5;
                 
-                this.ctx.strokeStyle = `rgba(59, 130, 246, ${connection.opacity * 0.3})`;
+                this.ctx.strokeStyle = `rgba(${primaryColor}, ${connection.opacity * baseOpacity})`;
                 this.ctx.lineWidth = 1;
                 this.ctx.beginPath();
                 this.ctx.moveTo(fromNeuron.x, fromNeuron.y);
@@ -93,12 +127,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 this.ctx.beginPath();
                 this.ctx.arc(x, y, 2, 0, Math.PI * 2);
-                this.ctx.fillStyle = `rgba(124, 196, 255, ${alpha})`;
+                this.ctx.fillStyle = `rgba(${lightColor}, ${alpha})`;
                 this.ctx.fill();
                 
                 this.ctx.beginPath();
                 this.ctx.arc(x, y, 6, 0, Math.PI * 2);
-                this.ctx.fillStyle = `rgba(59, 130, 246, ${alpha * 0.2})`;
+                this.ctx.fillStyle = `rgba(${primaryColor}, ${alpha * 0.2})`;
                 this.ctx.fill();
                 
                 return true;
@@ -114,13 +148,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 );
                 
                 if (neuron.isLarge) {
-                    gradient.addColorStop(0, `rgba(59, 130, 246, ${0.8 * pulseIntensity})`);
-                    gradient.addColorStop(0.5, `rgba(59, 130, 246, ${0.3 * pulseIntensity})`);
-                    gradient.addColorStop(1, 'rgba(59, 130, 246, 0)');
+                    gradient.addColorStop(0, `rgba(${primaryColor}, ${0.8 * pulseIntensity})`);
+                    gradient.addColorStop(0.5, `rgba(${primaryColor}, ${0.3 * pulseIntensity})`);
+                    gradient.addColorStop(1, `rgba(${primaryColor}, 0)`);
                 } else {
-                    gradient.addColorStop(0, `rgba(124, 196, 255, ${0.6 * pulseIntensity})`);
-                    gradient.addColorStop(0.5, `rgba(59, 130, 246, ${0.2 * pulseIntensity})`);
-                    gradient.addColorStop(1, 'rgba(59, 130, 246, 0)');
+                    gradient.addColorStop(0, `rgba(${lightColor}, ${0.6 * pulseIntensity})`);
+                    gradient.addColorStop(0.5, `rgba(${primaryColor}, ${0.2 * pulseIntensity})`);
+                    gradient.addColorStop(1, `rgba(${primaryColor}, 0)`);
                 }
                 
                 this.ctx.beginPath();
@@ -131,8 +165,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.ctx.beginPath();
                 this.ctx.arc(neuron.x, neuron.y, neuron.size * pulseIntensity, 0, Math.PI * 2);
                 this.ctx.fillStyle = neuron.isLarge ? 
-                    `rgba(59, 130, 246, ${0.9 * pulseIntensity})` : 
-                    `rgba(124, 196, 255, ${0.7 * pulseIntensity})`;
+                    `rgba(${primaryColor}, ${0.9 * pulseIntensity})` : 
+                    `rgba(${lightColor}, ${0.7 * pulseIntensity})`;
                 this.ctx.fill();
             });
 
@@ -500,19 +534,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // Auto-rotate (optional - can be disabled)
-        let autoRotateInterval = setInterval(nextService, 4000);
-
-        // Pause on hover
-        const carouselWrapper = document.querySelector('.carousel-wrapper');
-        if (carouselWrapper) {
-            carouselWrapper.addEventListener('mouseenter', () => {
-                clearInterval(autoRotateInterval);
-            });
-            carouselWrapper.addEventListener('mouseleave', () => {
-                autoRotateInterval = setInterval(nextService, 4000);
-            });
-        }
+        // Auto-rotate disabled - only manual navigation with buttons
 
         // Initialize
         updateCarousel();

@@ -46,8 +46,12 @@ require_once 'header.php';
                 </div>
             </div>
             <div class="carousel-controls">
-                <button class="carousel-btn prev-btn" id="prevBtn">‹</button>
-                <button class="carousel-btn next-btn" id="nextBtn">›</button>
+                <button class="carousel-btn prev-btn" id="prevBtn">
+                    <i class="fa-solid fa-square-caret-left"></i>
+                </button>
+                <button class="carousel-btn next-btn" id="nextBtn">
+                    <i class="fa-solid fa-square-caret-right"></i>
+                </button>
             </div>
         </div>
     </div>
