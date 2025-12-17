@@ -156,7 +156,7 @@ require_once 'header.php';
                         <div class="tech-item-icon"><img src="images/tile_icons/gpt.png" alt="GPT-4"></div>
                         <div class="tech-item-text">
                             <h4>State-of-the-Art ML Models</h4>
-                            <p>Utilizing GPT-4, Claude 3.5, and Llama 3 for world-class intelligence.</p>
+                            <p>Utilizing GPT, Claude, and Llama for world-class intelligence.</p>
                         </div>
                     </div>
                     <div class="tech-item">
@@ -188,11 +188,11 @@ require_once 'header.php';
                     </div>
                     <div class="tech-logo-card">
                         <img src="images/tile_icons/llama.png" alt="Llama 3" class="tech-logo-icon">
-                        <span>Llama 3</span>
+                        <span>Llama </span>
                     </div>
                     <div class="tech-logo-card">
                         <img src="images/tile_icons/gpt.png" alt="GPT-4" class="tech-logo-icon">
-                        <span>GPT-4</span>
+                        <span>GPT</span>
                     </div>
                     <div class="tech-logo-card">
                         <img src="images/tile_icons/mcp.png" alt="MCP" class="tech-logo-icon">
