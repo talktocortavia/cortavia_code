@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  font-weight: 400;
+
+  /* Light theme (default): white + green */
+  color-scheme: light;
+  --c-bg: #ffffff;
+  --c-surface: #ffffff;
+  --c-surface-2: #f0fdf4; /* green tint */
+  --c-text: #0f172a;
+  --c-muted: #475569;
+  --c-border: rgba(15, 23, 42, 0.10);
+  --c-primary: #10b981;
+  --c-primary-2: #059669;
+  --c-primary-glow: rgba(16, 185, 129, 0.18);
+
+  color: var(--c-text);
+  background-color: var(--c-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Match PHP site behavior: dark mode should use dark color-scheme for native UI */
+/* Force class-based dark mode to override prefers-color-scheme media queries */
+.dark {
+  color-scheme: dark;
+  /* Dark theme (optional): deep slate with blue accents */
+  --c-bg: #0b1220;
+  --c-surface: #0f172a;
+  --c-surface-2: #111c32;
+  --c-text: #e2e8f0;
+  --c-muted: #94a3b8;
+  --c-border: rgba(226, 232, 240, 0.10);
+  --c-primary: #3b82f6;
+  --c-primary-2: #8b5cf6;
+  --c-primary-glow: rgba(59, 130, 246, 0.22);
+}
+
+/* Override any prefers-color-scheme media queries - class-based dark mode takes precedence */
+:root:not(.dark) {
+  color-scheme: light !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: radial-gradient(1200px 700px at 10% 10%, var(--c-primary-glow), transparent 55%),
+    radial-gradient(1000px 600px at 90% 80%, rgba(16, 185, 129, 0.10), transparent 50%),
+    var(--c-bg);
+  color: var(--c-text);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Custom Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Perspective for 3D carousel */
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+/* Container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
