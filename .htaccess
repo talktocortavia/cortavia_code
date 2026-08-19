@@ -6,6 +6,7 @@
     # App privacy pages (Play Console)
     RewriteRule ^appwall/privacy/?$ appwall/privacy.html [L]
     RewriteRule ^familycfo/privacy/?$ familycfo/privacy.html [L]
+    RewriteRule ^synapse/privacy/?$ synapse/privacy.html [L]
 
     # Old URLs
     RewriteRule ^privacy/?$ /appwall/privacy [R=301,L]
