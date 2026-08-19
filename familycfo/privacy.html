@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>App Wall Privacy Policy — Cortavia</title>
-  <meta name="description" content="Privacy policy for App Wall by Cortavia. On-device firewall. No accounts. No cloud." />
-  <link rel="canonical" href="https://cortavia.in/appwall/privacy" />
+  <title>Family CFO Privacy Policy — Cortavia</title>
+  <meta name="description" content="Privacy policy for Family CFO by Cortavia. On-device SMS finance tracking. No cloud account." />
+  <link rel="canonical" href="https://cortavia.in/familycfo/privacy" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
   <style>
@@ -16,7 +16,6 @@
       --muted: #94a3b8;
       --border: rgba(226, 232, 240, 0.12);
       --primary: #34d399;
-      --primary-2: #3b82f6;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -57,21 +56,13 @@
       -webkit-background-clip: text; background-clip: text; color: transparent;
     }
     .meta { color: var(--muted); }
-    .product {
-      display: flex; gap: 18px; align-items: center; text-align: left;
-      background: var(--surface); border: 1px solid var(--border); border-radius: 20px;
-      padding: 20px; margin: 28px 0 8px;
-    }
-    .product img { width: 72px; height: 72px; border-radius: 16px; object-fit: cover; }
-    .product h2 { font-size: 1.25rem; color: #fff; }
-    .product p { color: var(--muted); font-size: 0.95rem; }
     .card {
       background: var(--surface); border: 1px solid var(--border); border-radius: 20px;
       padding: 24px 26px; margin-top: 16px;
     }
     .card h2 { color: #fff; font-size: 1.25rem; margin-bottom: 10px; }
     .card p + p, .card p + ul { margin-top: 12px; }
-    ul { padding-left: 1.2rem; color: var(--text); }
+    ul { padding-left: 1.2rem; }
     li { margin: 8px 0; }
     code { font-size: 0.88em; color: #93c5fd; }
     footer {
@@ -93,59 +84,45 @@
   <main>
     <div class="hero">
       <span class="badge">Privacy Policy</span>
-      <h1>App Wall Privacy Policy</h1>
-      <p class="meta">Last updated: 18 August 2026</p>
-    </div>
-    <div class="product">
-      <img src="/images/app_wall_logo.jpg" alt="App Wall" />
-      <div>
-        <h2>App Wall</h2>
-        <p>On-device app firewall · <code>com.cortavia.appwall</code></p>
-      </div>
+      <h1>Family CFO Privacy Policy</h1>
+      <p class="meta">Last updated: 19 August 2026</p>
+      <p class="meta" style="margin-top:12px">Applies to <strong>Family CFO</strong> (<code>com.cortavia.familycfo</code>)</p>
     </div>
     <section class="card">
       <h2>Who we are</h2>
-      <p>App Wall is developed by Cortavia. Contact: <a href="mailto:contact@cortavia.in">contact@cortavia.in</a>. Website: <a href="https://cortavia.in">https://cortavia.in</a>.</p>
+      <p>Family CFO is developed by Cortavia. Contact: <a href="mailto:contact@cortavia.in">contact@cortavia.in</a>. Website: <a href="https://cortavia.in">https://cortavia.in</a>.</p>
     </section>
     <section class="card">
       <h2>Summary</h2>
-      <p>App Wall is an on-device app firewall. It does not require an account, does not use advertising or analytics SDKs, and does not upload your personal data to Cortavia servers. Your app list, settings, and block rules stay on your phone. Your internet traffic is filtered locally and never routed through our servers.</p>
+      <p>Family CFO reads bank and UPI SMS on your phone to show income, expenses, and upcoming payments. It does not require a Cortavia account. Transaction data is stored on your device. We do not upload your SMS or ledger to Cortavia servers.</p>
     </section>
     <section class="card">
       <h2>Data we collect</h2>
-      <p>We do <strong>not</strong> collect, sell, or share personal information such as your name, email, phone number, contacts, location, photos, or browsing history.</p>
-      <p>The following information is processed only on your device and is not transmitted to Cortavia:</p>
+      <p>We do <strong>not</strong> collect, sell, or share your name, email, contacts, location, or SMS with Cortavia or advertisers.</p>
+      <p>Processed only on your device:</p>
       <ul>
-        <li>Names, icons, and package identifiers of installed apps (to let you block or allow internet)</li>
-        <li>Your block/allow rules, language preference, and firewall settings</li>
-        <li>Local VPN status needed to enforce those rules</li>
+        <li>Bank and UPI SMS used to build your local transaction list</li>
+        <li>Account last-4 digits discovered from those messages</li>
+        <li>App settings such as appearance</li>
       </ul>
     </section>
     <section class="card">
       <h2>Permissions</h2>
       <ul>
-        <li><strong>VPN service:</strong> Creates a local VPN on the device to block internet for selected apps. This is not a commercial VPN. Traffic is not sent to a remote Cortavia VPN server.</li>
-        <li><strong>Query installed apps:</strong> Lists apps on the device so you can choose which ones may use the internet.</li>
-        <li><strong>Notifications and foreground service:</strong> Shows that the firewall is running while rules are enforced.</li>
-        <li><strong>Boot completed:</strong> Optionally restores the local firewall after the phone restarts, if you enable that setting.</li>
-        <li><strong>Internet:</strong> Declared as a standard Android permission. App Wall does not upload your personal data or app list to Cortavia.</li>
+        <li><strong>Read SMS / receive SMS:</strong> Used only to import bank and card transaction messages you choose to sync. Messages stay on the device.</li>
       </ul>
     </section>
     <section class="card">
       <h2>Sharing and third parties</h2>
-      <p>We do not share App Wall user data with third parties. The app does not include ads, crash-reporting, or analytics services that collect personal data. Google Play may process install and review data under Google's own policies when you download the app from Play.</p>
+      <p>We do not share Family CFO user data with third parties. The app does not include ads or analytics SDKs that collect personal data. Google Play may process install data under Google's policies.</p>
     </section>
     <section class="card">
       <h2>Data retention and deletion</h2>
-      <p>Because data stays on the device, uninstalling App Wall removes the app and its local settings. You can also turn the firewall off and clear rules inside the app at any time.</p>
+      <p>Uninstalling Family CFO removes the app and its local database. You can also stop SMS access from Android settings at any time.</p>
     </section>
     <section class="card">
       <h2>Children</h2>
-      <p>App Wall is not directed at children under 13. We do not knowingly collect personal information from children.</p>
-    </section>
-    <section class="card">
-      <h2>Changes</h2>
-      <p>If this policy changes, we will update this page and the “Last updated” date.</p>
+      <p>Family CFO is not directed at children under 13. We do not knowingly collect personal information from children.</p>
     </section>
     <section class="card">
       <h2>Contact</h2>
